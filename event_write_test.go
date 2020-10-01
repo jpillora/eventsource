@@ -14,7 +14,6 @@ func TestEncoderEncode(t *testing.T) {
 		{Event{ID: "123"}, "id: 123\ndata\n\n"},
 		{Event{Retry: "10000"}, "retry: 10000\ndata\n\n"},
 		{Event{Data: []byte("data")}, "data: data\n\n"},
-		{Event{ResetID: true}, "id\ndata\n\n"},
 	}
 	for i, tt := range table {
 		b := bytes.Buffer{}

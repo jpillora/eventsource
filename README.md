@@ -2,7 +2,7 @@
 
 [![GoDoc](https://godoc.org/github.com/jpillora/eventsource?status.svg)](https://godoc.org/github.com/jpillora/eventsource)
 
-An eventsource (Server Sent-Events) event encoder in Go (golang). This is the eventsource encoder from `github.com/bernerdschaefer/eventsource` with a simpler API.
+An eventsource ([Server Sent-Events](https://html.spec.whatwg.org/multipage/server-sent-events.html)) event encoder and decoder in Go (golang). The eventsource encoder from `github.com/bernerdschaefer/eventsource` with a simpler API.
 
 
 #### MIT License

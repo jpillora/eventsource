@@ -9,12 +9,19 @@ import (
 	"unicode/utf8"
 )
 
-// Event describes a single Server-Send Event
-type Event struct {
-	Type  string
-	ID    string
-	Retry string
-	Data  []byte
+//Encoder wraps an io.Writer
+type Encoder struct {
+	w io.Writer
+}
+
+//NewEncoder returns an Encoder
+func NewEncoder(w io.Writer) *Encoder {
+	return &Encoder{w: w}
+}
+
+//Encode a single Event onto the stream
+func (e *Encoder) Encode(event Event) error {
+	return WriteEvent(e.w, event)
 }
 
 // WriteEvent writes an Event onto the io.Writer.
